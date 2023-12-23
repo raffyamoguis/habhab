@@ -1,31 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:habhab/core/presentation/components/food_card.dart';
+import 'package:habhab/core/resources/app_colors.dart';
 
 class MustTry extends StatelessWidget {
   const MustTry({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20.0,
         ),
         Row(
           children: [
-            Text(
+            const Text(
               "Must Try Delight",
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Spacer(),
-            Text("More"),
+            const Spacer(),
+            TextButton(
+              onPressed: () {
+                debugPrint("More clicked!");
+              },
+              child: const Text(
+                "More",
+                style: TextStyle(
+                  color: AppColors.secondary,
+                ),
+              ),
+            ),
           ],
         ),
-        SingleChildScrollView(
+        const SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(children: [
             FoodCard(

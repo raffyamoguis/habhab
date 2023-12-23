@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
               AppStrings.accountMessage,
               style: TextStyle(
                 fontSize: 14.0,
-                color: AppColors.grey,
+                color: AppColors.secondary,
               ),
             ),
           ],
