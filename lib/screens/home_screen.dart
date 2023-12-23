@@ -24,6 +24,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: AppColors.white,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -75,7 +76,7 @@ class _HomeState extends State<Home> {
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) => _onPageTap(index),
         height: AppValues.navbarHeight,
-        // surfaceTintColor: Colors.white,
+        surfaceTintColor: AppColors.white,
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
