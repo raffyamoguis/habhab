@@ -17,6 +17,9 @@ class HomeView extends StatelessWidget {
         children: [
           // Search
           HomeSearch(),
+          SizedBox(
+            height: 4.0,
+          ),
           // Banner
 
           Expanded(
