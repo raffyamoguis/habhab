@@ -32,19 +32,23 @@ class FoodCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 17.0,
                     ),
+                  ),
+                  const SizedBox(
+                    height: 2.0,
                   ),
                   Row(
                     children: [
                       Text(
                         "₱ $price",
                         style: const TextStyle(
-                          fontWeight: FontWeight.bold,
                           fontSize: 16.0,
                         ),
                       ),
