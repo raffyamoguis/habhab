@@ -8,7 +8,7 @@ class HomeBanner extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(
-          height: 20.0,
+          height: 16.0,
         ),
         Container(
           width: double.infinity,
