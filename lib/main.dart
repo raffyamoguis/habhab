@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:habhab/core/resources/app_colors.dart';
+import 'package:habhab/core/resources/app_strings.dart';
 import 'package:habhab/screens/home_screen.dart';
 
 void main() {
@@ -12,9 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: AppStrings.appTitle,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
       ),
       home: const Home(),

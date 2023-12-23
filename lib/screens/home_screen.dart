@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:habhab/core/resources/app_colors.dart';
+import 'package:habhab/core/resources/app_constants.dart';
+import 'package:habhab/core/resources/app_strings.dart';
+import 'package:habhab/core/resources/app_values.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -8,6 +12,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
+
+  void _onPageTap(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,15 +28,18 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hello, Ryzon",
+              AppStrings.accountWelcome,
               style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.orange,
+                  fontSize: 20.0,
+                  color: AppColors.primary,
                   fontWeight: FontWeight.bold),
             ),
             Text(
-              "Unsa may gusto nimo kan.on ron?",
-              style: TextStyle(fontSize: 12.0, color: Colors.grey),
+              AppStrings.accountMessage,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: AppColors.grey,
+              ),
             ),
           ],
         ),
@@ -44,31 +59,39 @@ class _HomeState extends State<Home> {
               shape: CircleBorder(),
             ),
             child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.notifications_outlined)),
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_outlined,
+              ),
+            ),
           )
         ],
       ),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: AppConstants.pages,
+      ),
       bottomNavigationBar: NavigationBar(
-        selectedIndex: 0,
-        // backgroundColor: Colors.white,
-        surfaceTintColor: Colors.white,
+        selectedIndex: _currentIndex,
+        onDestinationSelected: (index) => _onPageTap(index),
+        height: AppValues.navbarHeight,
+        // surfaceTintColor: Colors.white,
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
-            label: "Home",
+            label: AppStrings.home,
           ),
           NavigationDestination(
-            icon: Icon(Icons.explore_outlined),
-            label: "Explore",
+            icon: Icon(Icons.list_alt),
+            label: AppStrings.order,
           ),
           NavigationDestination(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: "Cart",
+            icon: Icon(Icons.favorite_border),
+            label: AppStrings.favorites,
           ),
           NavigationDestination(
-            icon: Icon(Icons.account_circle_outlined),
-            label: "Profile",
+            icon: Icon(Icons.person_2_outlined),
+            label: AppStrings.profile,
           ),
         ],
       ),
