@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: AppStrings.appTitle,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
-        fontFamily: GoogleFonts.ibmPlexSans().fontFamily,
+        fontFamily: GoogleFonts.quicksand().fontFamily,
         useMaterial3: true,
       ),
       home: const Home(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habhab/core/resources/app_colors.dart';
 
 class FilterButton extends StatelessWidget {
   const FilterButton({super.key});
@@ -15,7 +16,7 @@ class FilterButton extends StatelessWidget {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.orange,
+            color: AppColors.primary,
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: const Center(

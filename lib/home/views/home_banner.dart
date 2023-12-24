@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habhab/core/resources/app_colors.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
@@ -13,7 +14,7 @@ class HomeBanner extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.orange,
+            color: AppColors.primary,
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: Row(

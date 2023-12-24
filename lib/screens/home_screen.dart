@@ -31,9 +31,10 @@ class _HomeState extends State<Home> {
             Text(
               AppStrings.accountWelcome,
               style: TextStyle(
-                  fontSize: 20.0,
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.bold),
+                fontSize: 20.0,
+                color: AppColors.primary,
+                fontWeight: FontWeight.w900,
+              ),
             ),
             Text(
               AppStrings.accountMessage,

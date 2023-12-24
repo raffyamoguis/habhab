@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habhab/core/resources/app_colors.dart';
 
 class FoodCard extends StatelessWidget {
   final String name;
@@ -55,7 +56,7 @@ class FoodCard extends StatelessWidget {
                       const Spacer(),
                       Ink(
                         decoration: const BoxDecoration(
-                          color: Colors.orange,
+                          color: AppColors.primary,
                           shape: BoxShape.circle,
                         ),
                         child: InkWell(
